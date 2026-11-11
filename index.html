@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zermatt · Clima en montaña</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <link rel="icon" href="./logo.png">
+</head>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div class="top-row">
+        <h1>Zermatt</h1>
+        <select id="lang" class="lang" aria-label="Language">
+          <option value="es">Español</option>
+          <option value="it">Italiano</option>
+          <option value="zh">中文</option>
+          <option value="de">Deutsch</option>
+          <option value="fr">Français</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+      <div class="controls">
+        <div class="tabs" id="tabs" role="tablist" aria-label="Zona de esquí"></div>
+        <label class="date">
+          <span data-i18n="from">Desde</span>
+          <input type="date" id="date">
+        </label>
+      </div>
+    </header>
+
+    <p class="status" id="status" role="status">Cargando…</p>
+
+    <section class="hero" id="hero" hidden></section>
+
+    <section class="days" id="days" aria-label="Pronóstico por día" hidden></section>
+
+    <section class="hourly" id="hourly" hidden>
+      <h2 data-i18n="hourly">Hora por hora</h2>
+      <div class="hourly-scroll" id="hourlyTable"></div>
+    </section>
+
+    <p class="updated" id="updated"></p>
+
+    <footer data-i18n="footer">Datos: Open-Meteo</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
